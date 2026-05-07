@@ -1,6 +1,7 @@
 /*everything will be black an white as for now */
 body
 {
+    font-family: 'Courier New', Courier, monospace;
     background-color: black;
     color: white;
 }
