@@ -2,6 +2,18 @@
 body
 {
     font-family: 'Courier New', Courier, monospace;
-    background-color: black;
-    color: white;
+    background-image: url("https://raw.githubusercontent.com/Hakuriyuo/Ruduino/main/assets/fixed_bg.gif");
+}
+
+.container
+{
+    justify-content: center;
+    display: flex;
+}
+
+.nav-bar
+{
+    border: 0.1em solid black;
+    width: 70%;
+    padding: 1em;
 }
