@@ -17,6 +17,11 @@
     --border: 1px solid #0a0a0a;
 }
 
+a 
+{
+  text-decoration: none;
+}
+
 body 
 {
     font-family: 'Share Tech Mono', 'Courier New', monospace;
