@@ -242,17 +242,6 @@ body
     position: relative;
 }
 
-.grid 
-{
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 1px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--black) var(--white);
-}
-
 .grid::-webkit-scrollbar        
 { 
     height: 6px; 
@@ -624,10 +613,29 @@ body
     .page-header-inner,
     .alert-banner,
     .filter-inner,
-    .grid-outer,
     .info-strip,
     .footer-inner 
     {
         width: 92%;
     }
+}
+
+.grid-outer 
+{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    border: 1px solid var(--black);
+    background: rgba(240, 240, 232, 0.88);
+    position: relative;
+}
+
+.grid 
+{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1px;
+    width: fit-content;
 }

@@ -1,16 +1,16 @@
-const level2 = "";
-const level3 = "";
-const level4 = "";
-const level5 = "";
-const level6 = "";
+const level2 = "https://raw.githubusercontent.com/Hakuriyuo/Ruduino/main/assets/level2.png";
+const level3 = "https://raw.githubusercontent.com/Hakuriyuo/Ruduino/main/assets/level3.png";
+const level4 = "https://raw.githubusercontent.com/Hakuriyuo/Ruduino/main/assets/level4.png";
+const level5 = "https://raw.githubusercontent.com/Hakuriyuo/Ruduino/main/assets/level5.png";
+const level6 = "https://raw.githubusercontent.com/Hakuriyuo/Ruduino/main/assets/level6.png";
 
 const plans = 
 {
-    2: { src: 'assets/level2.png', label: 'LEVEL 2 — FIRE EVACUATION PLAN' },
-    3: { src: 'assets/level3.png', label: 'LEVEL 3 — FIRE EVACUATION PLAN' },
-    4: { src: 'assets/level4.png', label: 'LEVEL 4 — FIRE EVACUATION PLAN' },
-    5: { src: 'assets/level5.png', label: 'LEVEL 5 — FIRE EVACUATION PLAN' },
-    6: { src: 'assets/level6.png', label: 'LEVEL 6 — FIRE EVACUATION PLAN' },
+    2: { src: level2, label: 'LEVEL 2 — FIRE EVACUATION PLAN' },
+    3: { src: level3, label: 'LEVEL 3 — FIRE EVACUATION PLAN' },
+    4: { src: level4, label: 'LEVEL 4 — FIRE EVACUATION PLAN' },
+    5: { src: level5, label: 'LEVEL 5 — FIRE EVACUATION PLAN' },
+    6: { src: level6, label: 'LEVEL 6 — FIRE EVACUATION PLAN' },
 };
 
 function openModal(level) 
