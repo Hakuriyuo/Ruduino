@@ -60,7 +60,7 @@
     flex: 1;
     background: rgba(240, 240, 232, 0.92);
     border: 1px solid var(--black);
-    padding: 28px 28px 24px;
+    padding: 65.5px 28px 24px;
     backdrop-filter: blur(3px);
     animation: fadeUp 0.55s 0.1s ease both;
 }
