@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ruduino — Help</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="help.css">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Hakuriyuo/Ruduino/refs/heads/main/assets/derp.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="help.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <a class="nav-logo" href="index.html">RUDUINO</a>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="login.html">Login</a></li>
+                <li class="nav-item"><a href="resources.html">Resources</a></li>
+                <li class="nav-item"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="help-section">
+        <div class="help-header">
+            <p class="help-eyebrow">Support Centre</p>
+            <h1 class="help-title">HELP<span class="cursor"></span></h1>
+            <p class="help-sub">Frequently asked questions and guides for using Ruduino.</p>
+        </div>
+        <div class="help-search-wrap">
+            <input class="search-input" type="text" id="helpSearch" placeholder="Search help topics..."
+                oninput="filterFAQ()">
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="faq-wrap" id="faqWrap">
+            <div class="faq-group" data-tags="navigation search find building">
+                <button class="faq-q" onclick="toggleFAQ(this)">
+                    <span>How do I search for a building or room?</span>
+                    <span class="faq-chevron">▾</span>
+                </button>
+                <div class="faq-a">
+                    Type the name of a building, block, lecture hall, or facility into the search bar on the home page.
+                    Results will show the location and relevant details. You can also use the quick-link buttons
+                    (Lecture Halls, Labs, Library…) to browse by category.
+                </div>
+            </div>
+            <div class="faq-group" data-tags="account login register password">
+                <button class="faq-q" onclick="toggleFAQ(this)">
+                    <span>How do I create an account?</span>
+                    <span class="faq-chevron">▾</span>
+                </button>
+                <div class="faq-a">
+                    Go to the <a href="login.html">Login</a> page and click <strong>Register here</strong>. Fill in your
+                    campus email, username, and a password (minimum 8 characters). Once submitted, your account will be
+                    created immediately.
+                </div>
+            </div>
+            <div class="faq-group" data-tags="password reset forgot login">
+                <button class="faq-q" onclick="toggleFAQ(this)">
+                    <span>I forgot my password. What do I do?</span>
+                    <span class="faq-chevron">▾</span>
+                </button>
+                <div class="faq-a">
+                    Contact the IT Helpdesk at <strong>helpdesk@campus.edu</strong> with your campus ID and registered
+                    email. They will issue a password reset within one business day.
+                </div>
+            </div>
+            <div class="faq-group" data-tags="evacuation fire plan floor level resources">
+                <button class="faq-q" onclick="toggleFAQ(this)">
+                    <span>Where can I find the fire evacuation plans?</span>
+                    <span class="faq-chevron">▾</span>
+                </button>
+                <div class="faq-a">
+                    Visit the <a href="resources.html">Resources</a> page. Plans are available for Levels 2–6. Click any
+                    floor card to view the full plan, or use the Download button to save it. You can also filter by
+                    floor using the buttons above the grid.
+                </div>
+            </div>
+            <div class="faq-group" data-tags="map offline mobile phone">
+                <button class="faq-q" onclick="toggleFAQ(this)">
+                    <span>Does Ruduino work on mobile?</span>
+                    <span class="faq-chevron">▾</span>
+                </button>
+                <div class="faq-a">
+                    Yes. Ruduino is fully responsive and works on all modern smartphones and tablets. Simply open it in
+                    your browser — no app install required.
+                </div>
+            </div>
+            <div class="faq-group" data-tags="report wrong information error update">
+                <button class="faq-q" onclick="toggleFAQ(this)">
+                    <span>How do I report incorrect information?</span>
+                    <span class="faq-chevron">▾</span>
+                </button>
+                <div class="faq-a">
+                    Use the <a href="contact.html">Contact</a> form and select <strong>Campus Navigation Issue</strong>
+                    as the subject. Describe what is incorrect and we will review it promptly.
+                </div>
+            </div>
+            <div class="faq-group" data-tags="data privacy personal information stored">
+                <button class="faq-q" onclick="toggleFAQ(this)">
+                    <span>What data does Ruduino collect?</span>
+                    <span class="faq-chevron">▾</span>
+                </button>
+                <div class="faq-a">
+                    We only collect the information you provide when registering (email, username) and basic usage
+                    analytics. We never sell your data. Read our full <a href="privacy.html">Privacy Policy</a> for
+                    details.
+                </div>
+            </div>
+            <div class="faq-no-results" id="faqNoResults" style="display:none;">
+                No results found. Try a different keyword or <a href="contact.html">contact us</a>.
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <div class="footer-inner">
+            <span>© 2026 Ruduino - present</span>
+            <div class="footer-links">
+                <span onclick="location.href='privacy.html'">Privacy</span>
+                <span onclick="location.href='terms.html'">Terms</span>
+                <span onclick="location.href='help.html'">Help</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

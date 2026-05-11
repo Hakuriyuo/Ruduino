@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ruduino — Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Hakuriyuo/Ruduino/refs/heads/main/assets/derp.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="contact.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <a class="nav-logo" href="index.html">RUDUINO</a>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="login.html">Login</a></li>
+                <li class="nav-item"><a href="resources.html">Resources</a></li>
+                <li class="nav-item active"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section class="contact-section">
+        <div class="contact-header">
+            <p class="contact-eyebrow">Get in Touch</p>
+            <h1 class="contact-title">CONTACT<span class="cursor"></span></h1>
+            <p class="contact-sub">Questions, feedback, or issues? Reach the Ruduino team below.</p>
+        </div>
+        <div class="contact-layout">
+            <div class="contact-form-box">
+                <p class="box-label">// Send a message</p>
+                <div class="form-alert" id="contactAlert"></div>
+                <div class="form-group">
+                    <label class="form-label" for="c-name">Full Name</label>
+                    <input class="form-input" type="text" id="c-name" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="c-email">Email Address</label>
+                    <input class="form-input" type="email" id="c-email" placeholder="you@campus.edu">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="c-subject">Subject</label>
+                    <select class="form-input form-select" id="c-subject">
+                        <option value="">— Select a topic —</option>
+                        <option value="navigation">Campus Navigation Issue</option>
+                        <option value="account">Account / Login Help</option>
+                        <option value="evacuation">Evacuation Plan Concern</option>
+                        <option value="feedback">General Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="c-message">Message</label>
+                    <textarea class="form-input form-textarea" id="c-message"
+                        placeholder="Describe your issue or question..."></textarea>
+                </div>
+                <button class="submit-btn" id="contactSubmit" onclick="submitContact()">→ Send Message</button>
+            </div>
+            <div class="contact-info-col">
+                <div class="info-card">
+                    <p class="box-label">// Campus Security</p>
+                    <p class="info-card-value">999</p>
+                    <p class="info-card-sub">Emergency line — available 24/7</p>
+                </div>
+                <div class="info-card">
+                    <p class="box-label">// IT Helpdesk</p>
+                    <p class="info-card-value">helpdesk@campus.edu</p>
+                    <p class="info-card-sub">Mon – Fri, 8:00 AM – 6:00 PM</p>
+                </div>
+                <div class="info-card">
+                    <p class="box-label">// Admin Office</p>
+                    <p class="info-card-value">admin@campus.edu</p>
+                    <p class="info-card-sub">Level 2, Main Block</p>
+                </div>
+                <div class="info-card info-card-note">
+                    <p class="box-label">// Response Time</p>
+                    <p class="info-card-sub">Non-urgent messages are typically responded to within <strong>1–2 business
+                            days</strong>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <div class="footer-inner">
+            <span>© 2026 Ruduino - present</span>
+            <div class="footer-links">
+                <span onclick="location.href='privacy.html'">Privacy</span>
+                <span onclick="location.href='terms.html'">Terms</span>
+                <span onclick="location.href='help.html'">Help</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

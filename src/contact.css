@@ -1,0 +1,183 @@
+.contact-section 
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px 48px;
+    animation: fadeUp 0.5s ease both;
+}
+
+.contact-header 
+{
+    text-align: center;
+    margin-bottom: 36px;
+    background: rgba(240, 240, 232, 0.90);
+    border: 1px solid var(--black);
+    padding: 32px 48px 28px;
+    max-width: 640px;
+    width: 100%;
+    backdrop-filter: blur(3px);
+}
+
+.contact-eyebrow 
+{
+    font-size: 0.72rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 8px;
+}
+
+.contact-title 
+{
+    font-family: 'VT323', monospace;
+    font-size: 4.5rem;
+    line-height: 1;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.contact-sub 
+{
+    font-size: 0.82rem;
+    color: #444;
+    line-height: 1.6;
+    letter-spacing: 0.4px;
+}
+
+.contact-layout 
+{
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    max-width: 860px;
+    align-items: flex-start;
+}
+
+.contact-form-box 
+{
+    flex: 1;
+    background: rgba(240, 240, 232, 0.92);
+    border: 1px solid var(--black);
+    padding: 28px 28px 24px;
+    backdrop-filter: blur(3px);
+    animation: fadeUp 0.55s 0.1s ease both;
+}
+
+.box-label 
+{
+    font-size: 0.68rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.form-select 
+{
+    appearance: none;
+    cursor: pointer;
+}
+
+.form-textarea 
+{
+    resize: vertical;
+    min-height: 110px;
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 1.5;
+}
+
+.contact-info-col 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 240px;
+    flex-shrink: 0;
+    animation: fadeUp 0.6s 0.15s ease both;
+}
+
+.info-card 
+{
+    background: rgba(240, 240, 232, 0.92);
+    border: 1px solid var(--black);
+    padding: 18px 20px;
+    backdrop-filter: blur(3px);
+}
+
+.info-card-value 
+{
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    margin: 6px 0 4px;
+    word-break: break-all;
+}
+
+.info-card-sub 
+{
+    font-size: 0.7rem;
+    color: var(--gray);
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.info-card-note 
+{
+    border-left: 3px solid var(--black);
+}
+
+.info-card-note .info-card-sub strong 
+{
+    color: var(--black);
+}
+
+.form-alert 
+{
+    display: none;
+    padding: 10px 14px;
+    border: 1px solid;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.form-alert.error 
+{
+    display: block;
+    background: #c0392b;
+    border-color: #922b21;
+    color: var(--white);
+}
+
+.form-alert.success 
+{
+    display: block;
+    background: #1e8449;
+    border-color: #145a32;
+    color: var(--white);
+}
+
+@media (max-width: 720px) 
+{
+    .contact-layout 
+    {
+        flex-direction: column;
+    }
+    .contact-info-col 
+    {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .info-card 
+    {
+        flex: 1 1 140px;
+    }
+    .contact-header 
+    {
+        padding: 24px 20px;
+    }
+}
