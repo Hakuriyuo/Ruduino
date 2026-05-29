@@ -3,20 +3,18 @@
 <head>
     <title>Ruduino — Login</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Hakuriyuo/Ruduino/refs/heads/main/assets/derp.ico"
-        type="image/x-icon">
+    <link rel="shortcut icon" href="assets/derp.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src ="js/login.js" defer></script>
+    <script src="js/login.js" defer></script>
 </head>
 <body>
     <div class="container">
         <nav class="nav-bar">
             <a class="nav-logo" href="index.html">RUDUINO</a>
             <ul class="nav-list">
-                <li class="nav-item active"><a href="login.html" style="color:inherit;text-decoration:none;">Login</a>
-                </li>
-                <li class="nav-item"><a href="resources.html" style="color:inherit;text-decoration:none;">Resources</a>
-                </li>
+                <li class="nav-item active"><a href="login.html" style="color:inherit;text-decoration:none;">Login</a></li>
+                <li class="nav-item"><a href="map.html" style="color:inherit;text-decoration:none;">Map</a></li>
+                <li class="nav-item"><a href="resources.html" style="color:inherit;text-decoration:none;">Resources</a></li>
                 <li class="nav-item"><a href="contact.html" style="color:inherit;text-decoration:none;">Contact</a></li>
             </ul>
         </nav>
@@ -27,36 +25,30 @@
             <h1 class="login-title" id="formTitle">SIGN IN<span class="cursor"></span></h1>
             <p class="mode-indicator" id="modeIndicator">Existing account</p>
             <div class="form-alert" id="formAlert"></div>
-            <form method="POST" action="login_handler.php" id="authForm" novalidate>
+            <form method="POST" action="php/login_handler.php" id="authForm" novalidate>
                 <input type="hidden" name="mode" id="modeInput" value="login">
-                <div id="register-fields">
+                <div id="register-fields" style="display:none;">
                     <div class="form-group">
                         <label class="form-label" for="email">Email Address</label>
-                        <input class="form-input" type="email" name="email" id="email" placeholder="you@campus.edu"
-                            autocomplete="email">
+                        <input class="form-input" type="email" name="email" id="email" placeholder="you@campus.edu" autocomplete="email">
                     </div>
                     <hr class="divider">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="username">Username</label>
-                    <input class="form-input" type="text" name="username" id="username" placeholder="campus_id"
-                        autocomplete="username" required>
+                    <input class="form-input" type="text" name="username" id="username" placeholder="campus_id" autocomplete="username" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="password">Password</label>
-                    <input class="form-input" type="password" name="password" id="password" placeholder="••••••••"
-                        autocomplete="current-password" required>
+                    <input class="form-input" type="password" name="password" id="password" placeholder="••••••••" autocomplete="current-password" required>
                 </div>
                 <div id="confirm-field" style="display:none;">
                     <div class="form-group">
                         <label class="form-label" for="confirm_password">Confirm Password</label>
-                        <input class="form-input" type="password" name="confirm_password" id="confirm_password"
-                            placeholder="••••••••" autocomplete="new-password">
+                        <input class="form-input" type="password" name="confirm_password" id="confirm_password" placeholder="••••••••" autocomplete="new-password">
                     </div>
                 </div>
-
                 <button class="submit-btn" type="submit" id="submitBtn">→ Sign In</button>
-
                 <div class="toggle-row">
                     <span id="toggleHint">No account?</span>
                     <span class="toggle-link" id="toggleBtn" onclick="toggleMode()">Register here</span>
@@ -64,7 +56,7 @@
             </form>
         </div>
     </section>
-        <div class="footer">
+    <div class="footer">
         <div class="footer-inner">
             <span>© 2026 Ruduino - present</span>
             <div class="footer-links">

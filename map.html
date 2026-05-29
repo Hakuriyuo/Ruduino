@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ruduino — Live Map</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="shortcut icon" href="assets/derp.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <a class="nav-logo" href="index.html">RUDUINO</a>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="login.html" style="color:inherit;text-decoration:none;" id="nav-login-link">Login</a></li>
+                <li class="nav-item active"><a href="map.html" style="color:inherit;text-decoration:none;">Map</a></li>
+                <li class="nav-item"><a href="resources.html" style="color:inherit;text-decoration:none;">Resources</a></li>
+                <li class="nav-item"><a href="contact.html" style="color:inherit;text-decoration:none;">Contact</a></li>
+                <li class="nav-item" id="nav-user-item" style="display:none;">
+                    <span id="nav-username" style="opacity:0.6;font-size:0.82em;letter-spacing:1px;"></span>
+                    &nbsp;·&nbsp;
+                    <a id="nav-logout" href="#" style="color:inherit;text-decoration:none;">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="map-section">
+        <div class="map-sidebar">
+            <div class="sidebar-header">
+                <p class="sidebar-eyebrow">Campus Navigation</p>
+                <h2 class="sidebar-title">LIVE MAP<span class="cursor"></span></h2>
+            </div>
+
+            <div class="floor-switcher">
+                <p class="sidebar-label">// Select Floor</p>
+                <div class="floor-btns">
+                    <button class="floor-btn" data-floor="2">L2</button>
+                    <button class="floor-btn active" data-floor="3">L3</button>
+                    <button class="floor-btn" data-floor="4">L4</button>
+                    <button class="floor-btn" data-floor="5">L5</button>
+                    <button class="floor-btn" data-floor="6">L6</button>
+                </div>
+            </div>
+
+            <div class="location-status">
+                <p class="sidebar-label">// Your Location</p>
+                <div class="status-box" id="my-location-box">
+                    <span class="status-dot" id="my-status-dot"></span>
+                    <span id="my-location-text">Not set — tap the map</span>
+                </div>
+                <button class="clear-btn" id="clear-location-btn" style="display:none;">✕ Clear my location</button>
+            </div>
+
+            <div class="online-users">
+                <p class="sidebar-label">// Online Now <span class="user-count" id="user-count">0</span></p>
+                <ul class="user-list" id="user-list">
+                    <li class="user-list-empty">No one online yet</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-tip">
+                <p>Tap anywhere on the floor plan to share your location with other students. Pins refresh every 5 seconds.</p>
+            </div>
+        </div>
+
+        <div class="map-area">
+            <div class="map-floor-label" id="floor-label">Level 3</div>
+            <div class="map-wrapper" id="map-wrapper">
+                <img class="map-image" id="map-image" src="assets/level3area.png" alt="Level 3 floor plan" draggable="false">
+                <div class="pins-layer" id="pins-layer"></div>
+            </div>
+            <div class="map-legend">
+                <span class="legend-item"><span class="legend-dot me"></span> You</span>
+                <span class="legend-item"><span class="legend-dot others"></span> Others</span>
+                <span class="legend-item" style="margin-left:auto;font-size:0.7rem;color:#555;">Click map to set location</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="footer-inner">
+            <span>© 2026 Ruduino - present</span>
+            <div class="footer-links">
+                <span><a href="privacy.html">Privacy</a></span>
+                <span><a href="terms.html">Terms</a></span>
+                <span><a href="help.html">Help</a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script src="js/map.js" defer></script>
+</body>
+</html>
